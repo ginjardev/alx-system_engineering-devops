@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# while loop echoing "Best School" 10 times with a conditional
+counter=0
+while [[ $counter -lt 10 ]]; do
+	echo "Best School"
+	if [[ $counter -eq 8 ]]; then
+		echo "Hi"
+	fi
+	counter=$((counter + 1))
+done
