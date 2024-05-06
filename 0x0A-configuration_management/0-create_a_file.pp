@@ -1,3 +1,5 @@
+# This manifest creates a file 'school' in 'tmp'
+
 file { '/tmp/school':
   ensure  => present,
   content => 'I love Puppet',
