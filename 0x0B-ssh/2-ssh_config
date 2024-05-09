@@ -1,3 +1,4 @@
-IdentityFile ~/.ssh/school
-PubKeyAuthentication yes
-PasswordAuthentication no
+Host 54.82.25.37
+	IdentityFile ~/.ssh/school
+	PasswordAuthentication no
+	PubKeyAuthentication yes
