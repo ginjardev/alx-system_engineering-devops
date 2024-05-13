@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Configure your Nginx server so that /redirect_me is redirecting to another page.
+
+apt-get -y update
+apt-get -y install nginx
+echo "Hello World!" > /var/www/html/index.html
+replacement_string="server_name _;\n\trewrite ^\/redirect_me https:\/\/linktr.ee\/ginjardev permanent;"
+sed i 's/server_name _;/$replacement_string' /etc/nginx/sites-available/default
+service nginx start
