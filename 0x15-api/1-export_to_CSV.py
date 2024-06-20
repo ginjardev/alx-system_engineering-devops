@@ -36,5 +36,5 @@ if __name__ == "__main__":
             task_status = task["completed"]
             task_title = task["title"]
             csv_writer.writerow(
-                [user_id, employee_data["name"], task_status, task_title]
+                [user_id, employee_data["username"], task_status, task_title]
             )
