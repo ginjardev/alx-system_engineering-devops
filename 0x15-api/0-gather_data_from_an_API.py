@@ -6,7 +6,6 @@ to information about his/her TODO list progress.
 """
 
 import sys
-
 import requests
 
 user_id = sys.argv[1]
