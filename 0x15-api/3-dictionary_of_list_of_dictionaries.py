@@ -23,7 +23,7 @@ if __name__ == "__main__":
         emp_tasks = requests.get(
             f"https://jsonplaceholder.typicode.com/users/{emp_id}/todos"
         ).json()
-        employees_tasks[f"{emp_id}"] = emp_tasks
+        employees_tasks[emp_id] = emp_tasks
 
     json_filename = "todo_all_employees.json"
 
