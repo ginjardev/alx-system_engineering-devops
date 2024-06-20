@@ -8,8 +8,9 @@ to information about his/her TODO list progress.
 import sys
 import requests
 
-user_id = sys.argv[1]
 if __name__ == "__main__":
+
+    user_id = sys.argv[1]
 
     employee = requests.get(
         f"https://jsonplaceholder.typicode.com/users/{user_id}"
