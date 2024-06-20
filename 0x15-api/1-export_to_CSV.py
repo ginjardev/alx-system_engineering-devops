@@ -14,9 +14,7 @@ if __name__ == "__main__":
 
     user_id = sys.argv[1]
 
-    employee = requests.get(
-        f"https://jsonplaceholder.typicode.com/users/{user_id}"
-    )
+    employee = requests.get(f"https://jsonplaceholder.typicode.com/users/{user_id}")
     employee_data = employee.json()
 
     all_todos = requests.get(
@@ -35,4 +33,6 @@ if __name__ == "__main__":
         for task in todos_list:
             task_status = task["completed"]
             task_title = task["title"]
-            csv_writer.writerow([user_id, employee_data["name"], task_status, task_title])
+            csv_writer.writerow(
+                [user_id, employee_data["name"], task_status, task_title]
+            )
