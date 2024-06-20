@@ -20,9 +20,18 @@ if __name__ == "__main__":
 
     for employee in employees_data:
         emp_id = employee["id"]
-        emp_tasks = requests.get(
+        all_tasks = requests.get(
             f"https://jsonplaceholder.typicode.com/users/{emp_id}/todos"
         ).json()
+        emp_tasks = []
+        for task in all_tasks:
+            emp_tasks.append(
+                {
+                    "username": employee["username"],
+                    "task": task["title"],
+                    "completed": task["completed"]
+                }
+            )
         employees_tasks[emp_id] = emp_tasks
 
     json_filename = "todo_all_employees.json"
