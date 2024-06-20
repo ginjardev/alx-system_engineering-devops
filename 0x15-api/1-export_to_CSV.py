@@ -28,10 +28,6 @@ if __name__ == "__main__":
 
     with open(csv_filename, mode="w", newline="") as csv_fp:
         csv_writer = csv.writer(csv_fp, quoting=csv.QUOTE_ALL)
-        csv_writer.writerow(
-            ["USER_ID", "USERNAME", "TASK_COMPLETED_STATUS", "TASK_TITLE"]
-        )
-
         for task in todos_list:
             task_status = task["completed"]
             task_title = task["title"]
