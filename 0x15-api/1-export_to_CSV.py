@@ -14,7 +14,9 @@ if __name__ == "__main__":
 
     user_id = sys.argv[1]
 
-    employee = requests.get(f"https://jsonplaceholder.typicode.com/users/{user_id}")
+    employee = requests.get(
+        f"https://jsonplaceholder.typicode.com/users/{user_id}"
+    )
     employee_data = employee.json()
 
     all_todos = requests.get(
