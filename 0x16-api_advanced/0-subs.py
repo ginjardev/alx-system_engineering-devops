@@ -12,7 +12,7 @@ from sys import argv
 # if len(argv) < 2:
 #     raise IndexError("pass a value for subreddit")
 
-subreddit = argv[1]
+# subreddit = argv[1]
 
 def number_of_subscribers(subreddit):
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
