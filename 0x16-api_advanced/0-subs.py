@@ -2,9 +2,9 @@
 
 """Write a function that queries the Reddit API and returns the
 number of subscribers (not active users, total subscribers)
-for a given subreddit."""
+for a given subreddit.
+"""
 
-import json
 import requests
 from sys import argv
 
@@ -32,5 +32,3 @@ def number_of_subscribers(subreddit):
     
     return subscribers
 
-
-number_of_subscribers(subreddit)
