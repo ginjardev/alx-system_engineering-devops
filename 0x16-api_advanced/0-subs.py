@@ -9,8 +9,8 @@ import requests
 from sys import argv
 
 # subreddit endpoint https://www.reddit.com/r/subreddit/about.json
-if len(argv) < 2:
-    raise IndexError("pass a value for subreddit")
+# if len(argv) < 2:
+#     raise IndexError("pass a value for subreddit")
 
 subreddit = argv[1]
 
