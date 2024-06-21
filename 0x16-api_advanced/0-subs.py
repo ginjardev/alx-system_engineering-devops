@@ -6,20 +6,19 @@ for a given subreddit.
 
 import requests
 
+
 def number_of_subscribers(subreddit):
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
     headers = {"user-agent": "Chrome/126.0.0.0"}
 
     subscribers, data = "", ""
-    response = requests.get(url=url, headers=headers)
-    if response.status_code == 200:
+    response = requests.get(
+        url=url, headers=headers, allow_redirects=False
+    )
+    if response.status_code == 200 and not response.is_redirect:
         response = response.json()
-        if response["kind"] == "Listing":
-            return 0
+        data = response["data"]
+        subscribers = data["subscribers"]
+        return subscribers
     else:
         return 0
-
-    data = response["data"]
-    subscribers = data["subscribers"]
-
-    return subscribers
