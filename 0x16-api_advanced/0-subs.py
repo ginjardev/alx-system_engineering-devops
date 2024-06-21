@@ -9,7 +9,7 @@ import requests
 
 def number_of_subscribers(subreddit):
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
-    headers = {"User-Agent": "Chrome/126.0.0.0"}
+    headers = {"User-Agent": "balmain"}
 
     response = requests.get(url=url, headers=headers, allow_redirects=False)
 
