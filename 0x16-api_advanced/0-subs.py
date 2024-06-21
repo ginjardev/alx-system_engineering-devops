@@ -11,7 +11,7 @@ def number_of_subscribers(subreddit):
     url = f"https://www.reddit.com/r/{subreddit}/about.json"
     headers = {"user-agent": "Chrome/126.0.0.0"}
 
-    response = requests.get(url=url, headers=headers)
+    response = requests.get(url=url, headers=headers, allow_redirects=False)
 
     if response.status_code == 200 and not response.is_redirect:
         # Parse the JSON response and extract the number of subscribers
