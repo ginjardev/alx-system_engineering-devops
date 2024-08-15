@@ -7,7 +7,7 @@ import requests
 
 def number_of_subscribers(subreddit):
     """
-    Retrieves the number of subscribers for a given subreddit.
+    Returns the number of subscribers for a given subreddit.
 
     Args:
         subreddit (str): The name of the subreddit.
@@ -19,7 +19,7 @@ def number_of_subscribers(subreddit):
     response = requests.get(
         "https://www.reddit.com/r/{}/about.json".format(subreddit),
         allow_redirects=False,
-        headers={"user-agent": "nabuntu_bot-01"},
+        headers={"user-agent": "grey-01"},
         timeout=60,
     )
 
